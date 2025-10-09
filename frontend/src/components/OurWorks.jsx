@@ -1,4 +1,4 @@
-import Works from "../Works.json";
+
 import OurWorksList from "./OurWorksList";
 import { useState, useEffect } from "react";
 import Spiner from "./Spiner";
