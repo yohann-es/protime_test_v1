@@ -2,6 +2,9 @@ import Works from "../Works.json";
 import OurWorksList from "./OurWorksList";
 import { useState, useEffect } from "react";
 import Spiner from "./Spiner";
+
+
+
 const OurWorks = ({isHome= false}) => {
 
   // const WorksList  = isHome ? Works.slice(0,3) : Works
@@ -10,8 +13,7 @@ const OurWorks = ({isHome= false}) => {
 
   useEffect(()=>{
     const fetch_works = async () =>{
-      const apiurl_islimit= isHome? '?_limit=3' : '' 
-      const apiUrl = '/api/works' + apiurl_islimit
+      const apiUrl = `https://protime-backend-test-1.onrender.com/works${isHome ? '?_limit=3' : ''}`;
 
       try{
       const res = await fetch(apiUrl);
